@@ -1,0 +1,28 @@
+
+public class Seller extends User{
+	private String SellerID;
+	private String Name;
+	
+	public void Seller(String username, String password, int phoneNum, String email, String address, String id, String name) {
+		super();
+		
+		SellerID = id;
+		Name = name;
+	}
+
+	public String getSellerID() {
+		return SellerID;
+	}
+
+	public void setSellerID(String sellerID) {
+		SellerID = sellerID;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+}

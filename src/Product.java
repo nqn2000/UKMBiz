@@ -1,0 +1,70 @@
+
+public class Product {
+	
+	private String ProductID;
+	private String Name;
+	private int Price;
+	private String Category;
+	private int Stock;
+	private String Colour;
+	
+	public void Product(String productID, String name, int price, String category, int stock, String colour) {
+		
+		ProductID = productID;
+		Name = name;
+		Price = price;
+		Category = category;
+		Stock = stock;
+		Colour = colour;
+	}
+
+	public String getProductID() {
+		return ProductID;
+	}
+
+	public void setProductID(String productID) {
+		ProductID = productID;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public int getPrice() {
+		return Price;
+	}
+
+	public void setPrice(int price) {
+		Price = price;
+	}
+
+	public String getCategory() {
+		return Category;
+	}
+
+	public void setCategory(String category) {
+		Category = category;
+	}
+
+	public int getStock() {
+		return Stock;
+	}
+
+	public void setStock(int stock) {
+		Stock = stock;
+	}
+
+	public String getColour() {
+		return Colour;
+	}
+
+	public void setColour(String colour) {
+		Colour = colour;
+	}
+
+	
+}

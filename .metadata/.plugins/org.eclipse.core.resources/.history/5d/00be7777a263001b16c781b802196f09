@@ -1,0 +1,131 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class ProductDetails extends JFrame {
+
+	private JPanel contentPane;
+	private JTable tbl_productid;
+	private JTextField txt_productid;
+	private JTextField name;
+	private JTextField txt_price;
+	private JTextField txt_colour;
+	private JTextField txt_category;
+	private JTextField txt_stock;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ProductDetails frame = new ProductDetails();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ProductDetails() {
+		setTitle("UKMBiz");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 720, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lbl_productInfo = new JLabel("Product Information");
+		lbl_productInfo.setFont(new Font("Sylfaen", Font.PLAIN, 27));
+		lbl_productInfo.setBounds(10, 11, 232, 36);
+		contentPane.add(lbl_productInfo);
+		
+		tbl_productid = new JTable();
+		tbl_productid.setBounds(10, 59, 107, 150);
+		contentPane.add(tbl_productid);
+		
+		JLabel lblNewLabel = new JLabel("Product ID");
+		lblNewLabel.setBounds(153, 59, 65, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblName = new JLabel("Name");
+		lblName.setBounds(153, 84, 65, 14);
+		contentPane.add(lblName);
+		
+		JLabel lblPrice = new JLabel("Price");
+		lblPrice.setBounds(153, 109, 65, 14);
+		contentPane.add(lblPrice);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setBounds(153, 134, 46, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("Colour");
+		lblNewLabel_4.setBounds(153, 134, 65, 14);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("Category");
+		lblNewLabel_5.setBounds(153, 159, 65, 14);
+		contentPane.add(lblNewLabel_5);
+		
+		txt_productid = new JTextField();
+		txt_productid.setBounds(228, 56, 158, 20);
+		contentPane.add(txt_productid);
+		txt_productid.setColumns(10);
+		
+		name = new JTextField();
+		name.setColumns(10);
+		name.setBounds(228, 81, 158, 20);
+		contentPane.add(name);
+		
+		txt_price = new JTextField();
+		txt_price.setColumns(10);
+		txt_price.setBounds(228, 106, 158, 20);
+		contentPane.add(txt_price);
+		
+		txt_colour = new JTextField();
+		txt_colour.setColumns(10);
+		txt_colour.setBounds(228, 131, 158, 20);
+		contentPane.add(txt_colour);
+		
+		txt_category = new JTextField();
+		txt_category.setColumns(10);
+		txt_category.setBounds(228, 156, 158, 20);
+		contentPane.add(txt_category);
+		
+		txt_stock = new JTextField();
+		txt_stock.setColumns(10);
+		txt_stock.setBounds(228, 181, 158, 20);
+		contentPane.add(txt_stock);
+		
+		JLabel lbl_picproduct = new JLabel("Picture Product");
+		lbl_picproduct.setBounds(479, 59, 131, 142);
+		contentPane.add(lbl_picproduct);
+		
+		JLabel lblNewLabel_5_1 = new JLabel("Stock");
+		lblNewLabel_5_1.setBounds(153, 184, 65, 14);
+		contentPane.add(lblNewLabel_5_1);
+		
+		JButton btn_Back = new JButton("BACK");
+		btn_Back.setBounds(545, 227, 89, 23);
+		contentPane.add(btn_Back);
+		
+		JButton btn_AddToCart = new JButton("ADD TO CART");
+		btn_AddToCart.setBounds(446, 227, 89, 23);
+		contentPane.add(btn_AddToCart);
+	}
+}
